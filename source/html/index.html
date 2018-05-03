@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB" class="no-enhance">
+	<head>
+		<meta charset="utf-8">
+		<title>Inclusive autoplaying HTML5 video</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="/js/main.js" async></script>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		@include('./organisms/masthead-video.html', {
+			"class": "l-component",
+			"mp4": "/video/showreel.mp4",
+			"poster": "/img/showreel.jpg",
+			"heading": "Syndicut Showreel",
+			"href": "https://vimeo.com/257110692",
+			"text": "Watch the full video on Vimeo"
+		})
+
+		<div class="l-container">
+			@include('./molecules/video.html', {
+				"class": "l-component",
+				"videoclass": "",
+				"mp4": "/video/showreel.mp4",
+				"poster": "/img/showreel.jpg"
+			})
+		</div>
+    </body>
+</html>

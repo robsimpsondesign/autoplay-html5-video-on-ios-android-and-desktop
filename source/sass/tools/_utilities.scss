@@ -1,0 +1,73 @@
+/* ===========================================================
+
+	Tools - Utilities
+
+	Global website utility mixins and functions
+
+
+    1. Convert pixels to em (font-size: em(14px); // 0.875em)
+    2. Convert pixels to rem (font-size: rem(14px); // 0.875rem)
+	3. Aspect ratio container
+	4. Clear floats within container when overflow:hidden is undesirable
+    5. Hiding visually (keep accessibility) - http://h5bp.com/v -http://davidtheclark.github.io/scut/#hide_visually
+	6. Adds focus outline to elements
+
+=========================================================== */
+
+// 1
+@function em($pixels, $context: 16px) {
+	@if(unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if(unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1em;
+}
+
+// 2
+@function rem($pixels, $context: 16px) {
+	@if(unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if(unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1rem;
+}
+
+// 3
+@function in-ratio($width, $height) {
+    @return ($height / $width) * 100%;
+}
+
+// 4
+ @mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// 5
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// 6
+@mixin focus-outline($color: $co-focus, $width: $un-focus) {
+	box-shadow: 0 0 0 $width $color;
+	outline: none;
+}

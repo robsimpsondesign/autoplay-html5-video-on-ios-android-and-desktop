@@ -1,0 +1,112 @@
+/* ===========================================================
+
+    Organisms - Masthead Video
+
+    Global masthead video styling used throughout the site
+
+
+    1. Creates a container with an aspect ratio of 16:9 (the same aspect ratio of the video)
+    2. If the browser supports object-fit create a container that has an aspect ratio of 4:3 (taller than the video)
+    3. Make the video sit in the 16:9 container we creating with the padding-top set on .o-masthead-video__video-container
+    4. If the browser supports object-fit set the video to cover (this will make the video the same height as the container and cut off the video on the left and right)
+    5. On medium breakpoint set the video container to be the height of the users browsers
+    6. On medium breakpoint se the content container to be 100% width and height of the video container, add a dark overlay and center the text ontop of the video
+
+=========================================================== */
+
+.o-masthead-video {
+    @include respond-min($bp-md) {
+        position: relative;
+    }
+}
+
+.o-masthead-video__video-container {
+    padding-top: 56.25%; // 1
+    position: relative;
+
+    @supports (object-fit: cover) {
+        overflow: hidden;
+        padding-top: 75%; // 2
+
+        @include respond-min($bp-md) {
+            height: 100vh; // 5
+            padding-top: 0;
+        }
+    }
+
+    .m-video__button {
+        @include respond-min($bp-md) {
+            bottom: $un-xs;
+            left: $un-md;
+        }
+    
+        @include respond-min($bp-xl) {
+            bottom: $un-sm;
+            left: $un-xl;
+        }
+    
+        @include respond-min($bp-xxl) {
+            left: $un-xxxl;
+        }
+    }
+}
+
+.o-masthead-video__video {
+    // 3
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    // 4
+    @supports(object-fit: cover) {
+        object-fit: cover;
+    }
+}
+
+.o-masthead-video__content-container {
+    // 6
+    @include respond-min($bp-md) {
+        align-items: flex-end;
+        background-color: rgba($co-dark-1, .6);
+        color: $co-light-1;
+        display: flex;
+        height: 100%;
+        left: 0;
+        max-width: none;
+        padding-bottom: $un-xxl;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    @include respond-min($bp-xl) {
+        padding-bottom: $un-xxxl;
+    }
+}
+
+.o-masthead-video__content {
+    @include respond-max($bp-md) {
+        margin-top: $un-xs;
+    }
+}
+
+.o-masthead-video__heading {
+    @include respond-min($bp-md) {
+        color: currentColor;
+    }
+}
+
+.o-masthead-video__link {
+    color: currentColor;
+
+    @include respond-min($bp-md) {
+        @include a-link(rgba($co-light-1, .25), rgba($co-light-1, .25));
+
+        &:focus {
+            @include focus-outline(rgba($co-light-1, .5));
+        }
+    }
+}

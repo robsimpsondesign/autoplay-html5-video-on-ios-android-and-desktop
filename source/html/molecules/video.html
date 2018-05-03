@@ -1,0 +1,21 @@
+<div class="m-video js-video @class">
+    <video class="m-video__video js-video-video @videoclass" poster="@poster" autoplay loop muted playsinline>
+        <source src="@mp4" type="video/mp4">
+    </video>
+
+    @include('./atoms/button.html', {
+        "class": "m-video__button js-video-play-button",
+        "icon": "play",
+        "pressed": "true",
+        "title": "Play video",
+        "type": "button"
+    })
+
+    @include('./atoms/button.html', {
+        "class": "m-video__button js-video-pause-button",
+        "icon": "pause",
+        "pressed": "false",
+        "title": "Pause video",
+        "type": "button"
+    })
+</div>

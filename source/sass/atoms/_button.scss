@@ -1,0 +1,30 @@
+/* ===========================================================
+
+    Atoms - Button
+
+    Global button styling used throughout the site
+
+
+	1.
+
+=========================================================== */
+
+.a-button {
+    background-color: $co-light-1;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow $ut-speed $ut-timing-func-1, opacity $ut-speed $ut-timing-func-1;
+
+    &:focus {
+        @include focus-outline(rgba($co-light-1, .5));
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.a-button__icon {
+    padding: $un-xxxs;
+}

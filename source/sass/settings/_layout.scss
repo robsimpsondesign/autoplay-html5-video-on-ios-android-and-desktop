@@ -1,0 +1,37 @@
+/* ===========================================================
+
+	Settings - Layout
+
+	Global website layout
+
+
+    1.
+
+=========================================================== */
+
+.l-container {
+    margin-left: auto;
+	margin: auto;
+	max-width: 1480px;
+    padding-left: $un-xs;
+    padding-right: $un-xs;
+
+    @include respond-min($bp-md) {
+        padding-left: $un-md;
+        padding-right: $un-md;
+    }
+
+    @include respond-min($bp-xl) {
+        padding-left: $un-xl;
+        padding-right: $un-xl;
+    }
+
+    @include respond-min($bp-xxl) {
+        padding-left: $un-xxxl;
+        padding-right: $un-xxxl;
+    }
+}
+
+.l-component {
+    @include row-spacing-bottom(40px, 120px);
+}

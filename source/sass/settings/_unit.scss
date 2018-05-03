@@ -1,0 +1,65 @@
+/* ===========================================================
+
+	Settings - Unit
+
+	Global website unit variables
+
+
+    1.
+
+=========================================================== */
+
+$un-xxxxs:              rem(5px);
+$un-xxxs:               rem(10px);
+$un-xxs:                rem(15px);
+$un-xs:                 rem(20px);
+$un-sm:                 rem(30px);
+$un-md:                 rem(40px);
+$un-lg:                 rem(50px);
+$un-xl:                 rem(60px);
+$un-xxl:                rem(80px);
+$un-xxxl:               rem(100px);
+$un-xxxxl:              rem(120px);
+
+$un-focus:        		rem(4px);
+$un-radius:             rem(2px);
+
+@mixin row-spacing-bottom($min, $max) {
+	margin-bottom: rem($min);
+
+    @include respond-min($bp-sm) {
+        margin-bottom: rem($min + (($max - $min) / 4));
+    }
+
+    @include respond-min($bp-md) {
+        margin-bottom: rem($min + ((($max - $min) / 4) * 2));
+    }
+
+    @include respond-min($bp-lg) {
+        margin-bottom: rem($min + ((($max - $min) / 4) * 3));
+    }
+
+    @include respond-min($bp-xl) {
+        margin-bottom: rem($max);
+    }
+}
+
+@mixin row-spacing-top($min, $max) {
+	margin-top: rem($min);
+
+    @include respond-min($bp-sm) {
+        margin-top: rem($min + (($max - $min) / 4));
+    }
+
+    @include respond-min($bp-md) {
+        margin-top: rem($min + ((($max - $min) / 4) * 2));
+    }
+
+    @include respond-min($bp-lg) {
+        margin-top: rem($min + ((($max - $min) / 4) * 3));
+    }
+
+    @include respond-min($bp-xl) {
+        margin-top: rem($max);
+    }
+}

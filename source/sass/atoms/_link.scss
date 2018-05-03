@@ -1,0 +1,36 @@
+/* ===========================================================
+
+    Atoms - Link
+
+    Global link styling used throughout the site
+
+
+	1.
+
+=========================================================== */
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    transition: box-shadow $ut-speed $ut-timing-func-1;
+
+    &:focus {
+        @include focus-outline();
+    }
+}
+
+@mixin a-link($border: $co-secondary, $border-hover: $co-primary, $border-size: 35%) {
+    background-image: linear-gradient($border-hover, $border-hover), linear-gradient($border, $border);
+    background-position: bottom left, bottom left;
+    background-repeat: no-repeat;
+    background-size: 0% $border-size, 100% $border-size;
+    transition: background-size $ut-speed $ut-timing-func-1, box-shadow $ut-speed $ut-timing-func-1;
+
+    &:hover {
+        background-size: 100% $border-size, 100% $border-size;
+    }
+}
+
+.a-link {
+    @include a-link();
+}

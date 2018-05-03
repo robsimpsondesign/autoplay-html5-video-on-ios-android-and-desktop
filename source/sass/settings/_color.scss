@@ -1,0 +1,38 @@
+/* ===========================================================
+
+	Settings - Color
+
+	Global website color variables
+
+
+    1.
+
+=========================================================== */
+
+$co-dark-1:             #000000;
+$co-dark-2:             #3e3e3e;
+$co-light-1:            #ffffff;
+$co-light-2: 			#f9f9f9;
+$co-grey-1:             #f3f3f3;
+$co-grey-2:             #dcdcdc;
+
+$co-blue-1:             #b2f0fc;
+$co-green-1: 			#31cc89;
+$co-green-2: 			#bcead6;
+$co-red-1: 				#ffdede;
+$co-yellow-1:           #fff4bf;
+
+$co-primary:            $co-green-1;
+$co-secondary: 			$co-green-2;
+
+$co-body-background:    $co-light-2;
+$co-heading-text:       $co-dark-1;
+$co-body-text:          $co-dark-2;
+$co-focus: 				$co-primary;
+$co-selection:          $co-primary;
+$co-placeholder:        rgba($co-body-text, .5);
+$co-disabled:           $co-grey-2;
+$co-error:              $co-red-1;
+$co-info:               $co-grey-1;
+$co-success:            $co-green-1;
+$co-warning:            $co-yellow-1;

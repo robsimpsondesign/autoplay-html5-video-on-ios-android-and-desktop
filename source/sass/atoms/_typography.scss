@@ -1,0 +1,232 @@
+/* ===========================================================
+    Atoms - Typography
+    Global typography styling used throughout the site
+	1. http://elliotjaystocks.com/blog/kerning/
+	2. Increase letter-spacing on high pixel density screens as they can appear too close
+    3. Word-spacing same as letter-spacing for consistency
+=========================================================== */
+
+body {
+    font-family: "Playfair Display", times;
+	font-size: rem(17px);
+	font-feature-settings: "liga", "kern"; // 1
+    font-kerning: normal;
+	line-height: 1.5;
+
+	@include respond-min($bp-sm) {
+		font-size: rem(18px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(19px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(20px);
+	}
+}
+
+@mixin type-heading() {
+	color: $co-heading-text;
+	font-weight: 900;
+	line-height: 1.25;
+}
+
+.a-type-heading {
+	@include type-heading();
+}
+
+@mixin type-xxl() {
+	font-size: rem(40px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(43px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(59px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(76px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(94px);
+	}
+}
+
+.a-type-xxl {
+	@include type-heading();
+	@include type-xxl();
+}
+
+@mixin type-xl() {
+	font-size: rem(35px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(37px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(49px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(61px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(74px);
+	}
+}
+
+.a-type-xl {
+	@include type-heading();
+	@include type-xl();
+}
+
+@mixin type-lg() {
+	font-size: rem(30px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(32px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(41px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(49px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(57px);
+	}
+}
+
+.a-type-lg {
+	@include type-heading();
+	@include type-lg();
+}
+
+@mixin type-md() {
+	font-size: rem(26px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(28px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(34px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(39px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(44px);
+	}
+}
+
+.a-type-md {
+	@include type-heading();
+	@include type-md();
+}
+
+@mixin type-sm() {
+	font-size: rem(23px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(24px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(28px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(31px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(34px);
+	}
+}
+
+.a-type-sm {
+	@include type-sm();
+}
+
+@mixin type-xs() {
+	font-size: rem(20px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(21px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(23px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(25px);
+	}
+
+	@include respond-min($bp-xl) {
+		font-size: rem(26px);
+	}
+}
+
+.a-type-xs {
+	@include type-xs();
+}
+
+@mixin type-xxs() {
+	font-size: rem(17px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(18px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(19px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(20px);
+	}
+}
+
+.a-type-xxs {
+	@include type-xxs();
+}
+
+@mixin type-xxxs() {
+	font-size: rem(16px);
+
+	@include respond-min($bp-sm) {
+		font-size: rem(16px);
+	}
+
+	@include respond-min($bp-md) {
+		font-size: rem(17px);
+	}
+
+	@include respond-min($bp-lg) {
+		font-size: rem(18px);
+	}
+}
+
+.a-type-xxxs {
+	@include type-xxxs();
+}
+
+p {
+	@include hi-res() {
+		letter-spacing: .01em; // 2
+		word-spacing: .01em; // 3
+	}
+}

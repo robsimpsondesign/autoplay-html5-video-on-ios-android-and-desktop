@@ -1,0 +1,78 @@
+/* ===========================================================
+
+	Settings - Reset
+
+	Global styling reset
+
+
+	1. http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+
+=========================================================== */
+
+// 1
+@-ms-viewport {
+	width: device-width;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strike, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, main,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+button,
+input,
+select,
+textarea {
+	background-color: transparent;
+	color: inherit;
+	font: inherit;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+
+	::-moz-selection {
+		background: $co-selection;
+	}
+
+	::selection {
+		background: $co-selection;
+	}
+}
+
+body {
+	background: $co-body-background;
+	color: $co-body-text;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}

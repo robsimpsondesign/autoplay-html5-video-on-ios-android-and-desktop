@@ -1,0 +1,15 @@
+<button class="a-button @class" aria-pressed="@pressed" aria-label="@title" type="@type">
+    @if (icon === "play") {
+        @include('./atoms/icons/play.html', {
+            "class": "a-button__icon",
+            "title": "@title"
+        })
+    }
+
+    @if (icon === "pause") {
+        @include('./atoms/icons/pause.html', {
+            "class": "a-button__icon",
+            "title": "@title"
+        })
+    }
+</button>

@@ -1,0 +1,22 @@
+/* ===========================================================
+
+    Atoms - Icons
+
+    Global icon styling used throughout the site
+
+
+	1.
+
+=========================================================== */
+
+.a-icon {
+    fill: $co-dark-1;
+    height: rem(35px);
+    vertical-align: top;
+    width: rem(35px);
+
+    @include respond-min($bp-sm) {
+        height: $un-md;
+        width: $un-md;
+    }
+}

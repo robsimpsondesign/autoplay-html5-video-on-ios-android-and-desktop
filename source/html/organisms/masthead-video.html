@@ -1,0 +1,15 @@
+<header class="o-masthead-video @class">
+    @include('./molecules/video.html', {
+        "class": "o-masthead-video__video-container",
+        "videoclass": "o-masthead-video__video",
+        "mp4": "@mp4",
+        "poster": "@poster"
+    })
+
+    <div class="l-container o-masthead-video__content-container">
+        <div class="o-masthead-video__content">
+            <h1 class="a-type-xl o-masthead-video__heading">@heading</h1>
+            <a href="@href" class="a-link a-type-xs o-masthead-video__link" rel="noopener" target="_balnk">@text</a>
+        </div>
+    </div>
+</header>

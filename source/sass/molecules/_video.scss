@@ -1,0 +1,48 @@
+/* ===========================================================
+
+    Molecules - Video
+
+    Global video styling used throughout the site
+
+
+	1.
+
+=========================================================== */
+
+.m-video {
+    background-color: $co-dark-1;
+    position: relative;
+}
+
+.m-video__video {
+    display: block;
+    width: 100%;
+}
+
+.m-video__button {
+    bottom: $un-xxs;
+    left: $un-xxs;
+    position: absolute;
+    z-index: 20;
+}
+
+
+/* ===========================================================
+
+    Molecules - Video Modifiers
+
+
+    1. If the users browser doesn't cut the mustard, hide the buttons as they won't do anything
+    2. If the button has been pressed (the button that is active) hide it, and show the button that will trigger the next action
+
+=========================================================== */
+
+// 1
+.no-enhance .m-video__button {
+    display: none;
+}
+
+// 2
+.m-video__button[aria-pressed="true"] {
+    display: none;
+}

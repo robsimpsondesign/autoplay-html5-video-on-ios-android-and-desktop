@@ -1,0 +1,44 @@
+/* ===========================================================
+
+	Tools - Breakpoint
+	
+	Global website breakpoint mixins and functions
+
+    
+    1. High resolution device media query - http://davidtheclark.github.io/scut/#hd_breakpoint
+    
+=========================================================== */
+
+@mixin respond-max($breakpoint) {
+	$max-width: $breakpoint - em(1px);
+
+	@media screen and (max-width: $max-width) {
+		@content;
+	}
+}
+
+@mixin respond-min($breakpoint) {
+	$min-width: $breakpoint;
+
+	@media screen and (min-width: $min-width) {
+		@content;
+	}
+}
+
+@mixin respond-min-max($breakpoint-min, $breakpoint-max) {
+	$min-width: $breakpoint-min;
+	$max-width: $breakpoint-max - em(1px);
+
+	@media screen and (min-width: $min-width) and (max-width: $max-width) {
+		@content;
+	}
+}
+
+// 1
+@mixin hi-res($ratio: 2) {
+    @media (-o-min-device-pixel-ratio: #{$ratio}/1),
+             (-webkit-min-device-pixel-ratio: #{$ratio}),
+             (min-resolution: #{round(96 * $ratio)}dpi) {
+        @content;
+    }
+}
