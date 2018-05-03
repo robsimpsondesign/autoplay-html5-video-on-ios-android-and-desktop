@@ -1,6 +1,6 @@
-# Rob Simpson - Resource Boilerplate
+# Autoplay HTML5 video on iOS, android and desktop
 
-> Basic atomic design boilerplate to kickstart new front-end resource projects for [https://www.robsimpson.me](https://www.robsimpson.me)
+> Find out how to create inclusive, progressively enhanced, autoplaying HTML5 videos as a replacement for animated GIFs and component backgrounds. [https://www.robsimpson.me/tutorials/autoplay-html5-video-on-ios-android-and-desktop/](https://www.robsimpson.me/tutorials/autoplay-html5-video-on-ios-android-and-desktop/)
 
 ## Getting Started
 
